@@ -2,9 +2,7 @@
 language: python
 python: "2.7"
 
-install: pip install ansible
-install: pip install ansible-lint
-install: pip install yamllint
+install: pip install ansible ansible-lint yamllint
 
 script: ansible-lint ./
 script: yamllint ./
