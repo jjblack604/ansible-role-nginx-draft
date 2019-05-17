@@ -22,7 +22,7 @@
   notify: start nginx
 
 - name: Insert some info to /etc/nginx/conf.d/default.conf
-  blockinfile: 
+  blockinfile:
     path: /etc/nginx/conf.d/default.conf
     block: |
       location /nginx_status {
