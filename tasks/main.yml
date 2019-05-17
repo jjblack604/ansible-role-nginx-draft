@@ -1,5 +1,5 @@
 ---
--name: rpm key
+- name: rpm key
   become: true
   rpm_key:
     key: "{{ nginx_signing_key }}"
@@ -14,7 +14,7 @@
     enabled: true
     gpgcheck: true
 
-name: install nginx, start and enable it
+- name: install nginx, start and enable it
   become: true
   package:
     name: nginx
