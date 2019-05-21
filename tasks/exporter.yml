@@ -31,3 +31,16 @@
     owner: nginx
     group: nginx
     mode: '0644'
+
+- name:
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+    daemon-reload: yes
+
+- name:
+  service:
+    name: nginx_exporter
+    state: started
+    enabled: yes
