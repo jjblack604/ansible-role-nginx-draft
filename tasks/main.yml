@@ -52,3 +52,6 @@
       </body>
       </html>
     dest: /usr/share/nginx/html/index.html
+
+- name: Include exporter.yaml file
+  include: exporter.yaml
