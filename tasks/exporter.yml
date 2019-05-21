@@ -16,5 +16,5 @@
   become: true
   get url:
     url: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.3.0/nginx-prometheus-exporter-0.3.0-linux-amd64.tar.gz
-
+    dest: /home
 
