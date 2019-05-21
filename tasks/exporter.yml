@@ -49,5 +49,5 @@
   uri:
     url: localhost:9113/metrics
     method: GET
-  failed_when: "'nginx_up 1' in .stdout"
+  failed_when: "'nginx_up 1' in stdout"
 
