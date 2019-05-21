@@ -48,7 +48,6 @@
 - name: fail playbook
   uri:
     url: http://localhost:9113/metrics
-    method: GET
-    register: checknginxup
-  failed_when: "'nginx_up 1' in checknginxup.stdout"
-
+    return_content: yes
+  register: test
+  failed_when: "'nginx_up 1' in this.content"
