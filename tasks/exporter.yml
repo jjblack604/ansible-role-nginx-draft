@@ -50,4 +50,4 @@
     url: http://localhost:9113/metrics
     return_content: yes
   register: this
-  failed_when: "'nginx_up 1' in this.content"
+  failed_when: "'nginx_up 1' not in this.content"
