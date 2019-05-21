@@ -1,1 +1,13 @@
 ---
+- hosts: all
+  become: true
+  - name: add group
+    group: nginx-exp
+    state: present
+
+  - name: add user
+    user: nginx-exp
+    state: present
+    groups: nginx-exp
+
+
