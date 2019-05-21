@@ -26,10 +26,8 @@
     remote_src: yes
 
 - template: 
-  become: true
     src: "{{ nginx_node_exporter }}"
     dest: /etc/systemd/system/nginx_exporter.service
     owner: nginx
     group: nginx
     mode: '0644'
-
