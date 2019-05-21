@@ -45,9 +45,14 @@
     state: started
     enabled: yes
 
-- name: fail playbook
+- name: fail playbook 9113/metrics
   uri:
     url: http://localhost:9113/metrics
     return_content: yes
   register: this
   failed_when: "'nginx_up 1' not in this.content"
+
+- name: fail playbook status code 200
+  uri:
+    url: http://localhost:80
+    return content: yes"
