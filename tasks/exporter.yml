@@ -1,11 +1,13 @@
 ---
 - name: add group
+  become: true
   group:
     name: nginx-exp
     state: present
 
-#- name: add user
-#  become: true
-#  user: nginx-exp
-#  state: present
-#  groups: nginx-exp
+- name: add user
+  become: true
+  user:
+    name: nginx-exp
+    state: present
+    groups: nginx-exp
