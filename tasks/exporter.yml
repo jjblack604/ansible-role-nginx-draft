@@ -26,7 +26,7 @@
     remote_src: true
 
 - template:
-    src: "{{ nginx_node_exporter }}"
+    src: nginx_exporter.service
     dest: /etc/systemd/system/nginx_exporter.service
     owner: nginx
     group: nginx
