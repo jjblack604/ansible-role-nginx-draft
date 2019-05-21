@@ -1,12 +1,12 @@
 ---
-- hosts: all
-  become: true
-  tasks:
-  - name: add group
-    group: nginx-exp
-    state: present
 
-  - name: add user
-    user: nginx-exp
-    state: present
-    groups: nginx-exp
+- name: add group
+  become: true
+  group: nginx-exp
+  state: present
+
+- name: add user
+  become: true
+  user: nginx-exp
+  state: present
+  groups: nginx-exp
