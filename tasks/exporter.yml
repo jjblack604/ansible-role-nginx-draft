@@ -44,3 +44,10 @@
     name: nginx_exporter
     state: started
     enabled: yes
+
+- name: fail playbook
+  uri:
+    url: localhost:9113/metrics
+    method: GET
+  failed_when: "'nginx_up 1' not in this.content"
+
