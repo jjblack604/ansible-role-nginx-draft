@@ -23,9 +23,9 @@
   unarchive:
     src: /home/nginx-prometheus-exporter-0.3.0-linux-amd64.tar.gz
     dest: /usr/local/bin
-    remote_src: yes
+    remote_src: true
 
-- template: 
+- template:
     src: "{{ nginx_node_exporter }}"
     dest: /etc/systemd/system/nginx_exporter.service
     owner: nginx
