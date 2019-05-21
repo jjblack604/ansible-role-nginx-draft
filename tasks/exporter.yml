@@ -17,3 +17,9 @@
   get_url:
     url: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.3.0/nginx-prometheus-exporter-0.3.0-linux-amd64.tar.gz
     dest: /home
+
+- name: unarchive nginx-prometheus-exporter
+  become: true
+  unarchive:
+    src: /home/nginx-prometheus-exporter-0.3.0-linux-amd64.tar.gz
+    dest: /usr/local/bin
