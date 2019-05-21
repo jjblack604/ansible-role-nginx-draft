@@ -2,3 +2,5 @@
 nginx_base_repository: https://nginx.org/packages/centos/7/x86_64/
 nginx_signing_key: https://nginx.org/keys/nginx_signing.key
 nginx_scape_uri: http://localhost:80/nginx_status
+nginx_user: nginx
+nginx_group: nginx
