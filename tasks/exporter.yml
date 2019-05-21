@@ -24,3 +24,12 @@
     src: /home/nginx-prometheus-exporter-0.3.0-linux-amd64.tar.gz
     dest: /usr/local/bin
     remote_src: yes
+
+- template: 
+  become: true
+    src: "{{ nginx_node_exporter }}"
+    dest: /etc/systemd/system/nginx_exporter.service
+    owner: nginx
+    group: nginx
+    mode: '0644'
+
